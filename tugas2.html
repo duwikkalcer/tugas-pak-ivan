@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2/ Form</title>
+</head>
+<link rel="stylesheet" href="form.css">
+
+<body>
+    <section class="main-container">
+        <form id="regis" onsubmit="success(event)">
+            <div class="form-container">
+                <fieldset>
+                    <div class="logo">
+                        <img src="logo-wangsaf.jpg" alt="logo ig" width="120px" height="100px">
+                        <p style="text-align: center;font-size: small;font-weight: lighter;color: rgb(100, 100, 100);">Selamat datang di halaman registrasi <br>wangsaf gratis</p>
+                    </div>
+                    <div class="form-input">
+                        <div>
+                            <label for="Username">Nama Pengguna</label>
+                            <input type="text" placeholder="Username" name="Username" required>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div>
+                            <label for="name">Alamat Lengkap</label>
+                            <textarea name="alamat" required placeholder="Alamat"></textarea>
+                        </div>
+                        <div>
+                            <label for="opsi">Jenis Kelamin</label>
+
+                            <div>
+                                <input type="radio" name="opsi">
+                                <label for="opsi">Laki-laki</label>
+
+                            </div>
+                            <div>
+                                <input type="radio" name="opsi">
+                                <label for="opsi">Perempuan</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="opsi">
+                                <label for="opsi">Tidak ingin Menyebutkan</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="source">Darimana anda mengetahui tentang toko kami?</label>
+                            <select name="source">
+                                <optgroup label="Sosial Media">
+                                    <option value="instagram">Instagram</option>
+                                    <option value="tiktok">Tiktok</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="youtube">Youtube</option>
+                                </optgroup>
+                                <optgroup label="Sumber lain">
+                                    <option value="brosur">Brosur</option>
+                                    <option value="teman">Teman</option>
+                                    <option value="lainlain">Lain lain</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="syarat">
+                            <label for="syarat">Saya telah membaca dan menyetujui Syarat & Ketentuan</label>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn-daftar"  id="button">Daftar</button>
+                        </div>
+                    </div>
+                </fieldset>
+                <p>Kunjungi website kami di <a href="https://whatsapp.com" target="_blank" style="text-decoration:underline;color:black">https://whatsapp.com</a></p>
+        </form>
+    </section>
+    </div>
+    <p><a href="./tugas3.html" style="display:flex; justify-content: center;font-size: larger;text-decoration: underline;color: black;">MENUJU TUGAS 3</a></p>
+<script>
+    function success (event){
+        event.preventDefault();
+        const form = document.getElementById("regis")
+        const button = document.getElementById("button")
+       
+        
+        setTimeout(function (){
+            form.reset();
+            button.innerText = "Akun berhasil di daftarkan ✅"
+        } ,2000);
+    }
+</script>
+</body>
+
+</html>
